@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>订餐</title>
+	<link rel="stylesheet"  href="lib/jquery.mobile-1.2.0/jquery.mobile-1.2.0.min.css" />
+
+    <script src="lib/jquery.js"></script>
+	<script src="lib/jquery.mobile-1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+    <script src='data/foods.json' type='text/javascript'></script>
+    <script src='data/restaurants.json' type='text/javascript'></script>
+    <script src='data/users.json' type='text/javascript'></script>
+
+    <script src="js/application.js"></script>
+	<script type="text/javascript">
+    $(function(){
+		readUser();
+		readRes();
+		readFood();
+		})
+    </script>
+	<style type="text/css">
+		#content{
+			margin:0 auto;
+			width:300px;
+		}
+	</style>
+</head>
+<body>
+<div id="content" data-role='header'>
+	<a data-role="button" data-theme="a"  data-rel="back">back</a>
+    <h1>订餐</h1>
+</div>
+<div id="content">
+	<table>
+    	<tr>
+        人：
+        </tr>
+        <tr>
+        	<input type="text" id="user" class="user" >
+        </tr>
+        <tr>
+        	<input type="button" id="choseUser" class="choseUser" value="选人" onClick="choseUser()" >
+        </tr>
+        <tr>
+        餐厅：
+        </tr>
+        <tr>
+        	<input type="text" id="res" class="res" >
+        </tr>
+        <tr>
+        	<input type="button" id="choseRes" class="choseRes" value="选餐厅" onClick="choseRes()" >
+        </tr>
+        <tr>
+        套餐：
+        </tr>
+        <tr>
+        	<input type="text" id="food" class="food" >
+        </tr>
+        <tr>
+        	<input type="button" id="choseFood" class="choseFood" value="选套餐" onClick="choseFood()" >
+        </tr>
+        <tr>
+        	<input type="button" id="submit" class="submit" value="确认" onClick="submit()" >
+        </tr>
+    </table>
+</div>
+    
+</body>
+</body>
+</html>
